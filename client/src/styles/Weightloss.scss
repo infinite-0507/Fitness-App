@@ -1,0 +1,133 @@
+/* Keyframes for fade-in and slide-in animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.page-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.image-container {
+  grid-row: 1 / 2; /* Place image in the first row */
+  grid-column: 2 / 3; /* Place image in the second column */
+  margin: 20px;
+  animation: fadeIn 1s ease-in-out; /* Add fade-in animation */
+}
+
+.image-container img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 / 2; /* Place content in the first column */
+}
+
+.text-container,
+.workout-container,
+.goals-container {
+  background:#fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  animation: slideInLeft 1s ease-in-out; /* Add slide-in animation */
+}
+
+.teens {
+  border-left: 10px solid #ff6f61; /* Light Coral */
+}
+
+.young-adults {
+  border-left: 10px solid #6b5b95; /* Deep Purple */
+}
+
+.adults {
+  border-left: 10px solid #88b04b; /* Olive Green */
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+h3 {
+  color: #555;
+}
+
+p {
+  margin: 5px 0;
+}
+
+.goals-container {
+  background-color: #e0f7fa; /* Light Cyan background for goals section */
+  border-left: 10px solid #00796b; /* Teal border to highlight the goals section */
+  padding: 20px;
+}
+
+.goals-container h2 {
+  color: #00796b; /* Teal color for the goals heading */
+}
+
+.goals-container p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #004d40; /* Darker teal for goal text */
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-container {
+    grid-row: auto;
+    grid-column: auto;
+    margin: 10px 0;
+  }
+
+  .text-container,
+  .workout-container,
+  .goals-container {
+    padding: 15px;
+    margin: 10px 0;
+    animation: none; /* Disable animations on small screens */
+  }
+}
+.proceed-button {
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20
+}

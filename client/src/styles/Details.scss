@@ -1,0 +1,102 @@
+body.details-background {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent horizontal scroll */
+}
+
+body.details-background::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../Assets/details.jpg'); /* Ensure this path is correct */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1; /* Ensure it’s behind all content */
+  filter: blur(10px); /* Apply a blur effect */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Match the height of the viewport */
+  padding: 20px;
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  z-index: 1; /* Ensure the container is above the blur effect */
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #3c009d; /* Adjust color for contrast */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form {
+  width: 100%;
+  max-width: 400px;
+  max-height: 80vh; /* Limit form height to 80% of the viewport height */
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds max height */
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  border-radius: 10px; /* Slightly larger border radius */
+  padding: 30px 20px; /* Increase padding for better spacing */
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+}
+
+label {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #333;
+}
+
+input, select {
+  width: calc(100% - 24px); /* Adjust width to fit padding and border radius */
+  border: 1px solid #ccc; /* Add a border for better visibility */
+  outline: none;
+  padding: 10px;
+  background: transparent;
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  border-radius: 5px;
+  margin-bottom: 10px; /* Add margin for better spacing between elements */
+}
+
+button {
+  width: 100%;
+  text-align: center;
+  padding: 15px; /* Increase padding for better touch targets */
+  background-color: #F96167; /* Match the primary color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  font-size: 16px; /* Increase font size for better readability */
+  margin-top: 10px; /* Add margin for separation from input fields */
+}
+
+button:hover {
+  background-color: #D84951; /* Slightly darker on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add shadow on hover for a popping effect */
+}
+
+.error {
+  color: red;
+  margin-top: 5px;
+  font-size: 12px;
+  text-align: left;
+}
+
+* {
+  box-sizing: border-box; /* Ensure all elements include padding and border in their total width and height */
+}

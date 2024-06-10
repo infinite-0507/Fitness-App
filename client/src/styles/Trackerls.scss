@@ -1,0 +1,53 @@
+.tracker-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background-image: url('../Assets/calc.jpg'); /* Background image for the tracker page */
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.tracker-title {
+  font-size: 28px; /* Larger title font size */
+  margin-bottom: 30px; /* Increased margin bottom */
+  color: #ffffff; /* White title color */
+}
+
+.tracker-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Increased margin bottom */
+}
+
+.tracker-item label {
+  color: #ffffff; /* White label color */
+  margin-right: 20px; /* Adjusted margin-right for more space */
+}
+
+.tracker-item input {
+  padding: 12px; /* Increased input padding */
+  border-radius: 6px; /* Slightly increased border radius */
+  border: 1px solid #ffffff; /* White border */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  color: #333333; /* Darker text color */
+}
+
+.tracker-button {
+  padding: 12px; /* Increased button padding */
+  border: none;
+  width:300px;
+  border-radius: 6px; /* Slightly increased border radius */
+  background-color: #F96167; /* Match the primary color */
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tracker-button:hover {
+  background-color: #D84951; /* Slightly darker on hover */
+}

@@ -1,0 +1,93 @@
+/* Plans.scss */
+
+/* Body styling */
+.plans-body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative; /* Add position relative to allow absolute positioning of pseudo-element */
+  background-image: url('../Assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Blur overlay pseudo-element */
+.plans-body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Adjust the background color and opacity as needed */
+  backdrop-filter: blur(8px); /* Blur the background image */
+  z-index: 1; /* Ensure it's above the background image */
+}
+
+/* Container for image buttons */
+.image-buttons-container {
+  position: relative; /* Ensure it's above the blur overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* Add a semi-transparent white background for better readability */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Optional: add some shadow for better visual separation */
+  z-index: 2; /* Ensure it's above the blur overlay */
+}
+
+/* Heading */
+h1 {
+  font-size: 24px; /* Adjust font size of the heading */
+  margin-bottom: 50px; /* Add some space between h1 and the images */
+  color: rgb(5, 0, 0); /* Text color */
+}
+
+/* Wrapper for images */
+.images-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 50px; /* Adjust the gap between the images */
+}
+
+/* Individual image wrapper */
+.image-wrapper {
+  cursor: pointer;
+}
+
+/* Image button */
+.image-button {
+  width: 500px; /* Adjust the width of the images */
+  height: 400px; /* Adjust the height of the images */
+  border-radius: 20px; /* Adjust the border-radius */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add box shadow for depth */
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect on image button */
+.image-button:hover {
+  transform: scale(1.1); /* Scale up slightly on hover */
+}
+
+/* Heading for each image */
+h2 {
+  margin-top: 10px; /* Add space between image and h2 */
+  font-size: 20px; /* Adjust font size of h2 */
+  color: #faf7f7; /* Text color */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 500ms ease-in-out;
+}

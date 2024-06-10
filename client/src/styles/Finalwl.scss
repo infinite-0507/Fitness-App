@@ -1,0 +1,80 @@
+body.finalwl-page {
+    background-image: url('../Assets/results.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  .finalwl-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(247, 247, 247, 0.5); /* Slightly transparent to show background image */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); /* Apply blur effect to the background */
+  }
+  
+  .finalwl-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .performance-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .performance-item:last-child {
+    border-bottom: none;
+  }
+  
+  .performance-label {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .performance-value {
+    color: #333;
+  }
+  
+  .performance-message {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  
+  .performance-difference {
+    color: #e74c3c;
+    margin-top: 5px;
+  }
+  
+  .button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .new-user-button, .change-plan-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .new-user-button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .change-plan-button {
+    background-color: #f44336; /* Red */
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  

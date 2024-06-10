@@ -1,0 +1,60 @@
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .image-container {
+    margin-right: 20px;
+  }
+  
+  .image-container img {
+    max-width: 300px;
+    height: auto;
+  }
+  
+  .content-container {
+    max-width: 600px;
+  }
+  
+  .text-container,
+  .workout-container,
+  .goals-container {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .text-container h2,
+  .workout-container h2,
+  .goals-container h2 {
+    margin-top: 0;
+  }
+  
+  .teens {
+    background-color: #ffd54f;
+  }
+  
+  .young-adults {
+    background-color: #4fc3f7;
+  }
+  
+  .adults {
+    background-color: #ff8a65;
+  }
+  
+  .proceed-button {
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  p {
+    
+    margin: 5px 0;
+  }
